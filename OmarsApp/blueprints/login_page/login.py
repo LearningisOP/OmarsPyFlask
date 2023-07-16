@@ -4,7 +4,7 @@ from flask import Blueprint, render_template, request, redirect, url_for
 login_bp = Blueprint('login', __name__, template_folder="templates")
 
 
-@login_bp.route("/sign-up", methods=['GET', 'POST'])
+@login_bp.route("/", methods=['GET', 'POST'])
 def signup():
     username = request.form.get("username")
     print(username)
@@ -17,6 +17,6 @@ def login():
 
 @login_bp.route("/logout", methods=['GET', 'POST'])
 def logout():
-    return redirect(url_for("views.html"))
+    return redirect(url_for("home.html"))
 
 

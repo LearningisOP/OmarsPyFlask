@@ -13,11 +13,16 @@ templates Folder
 static Folder
 __init__py
 appname.py
-Video that explains this https://www.youtube.com/watch?v=WteIH6J9v64&t=111s
+Video that explains this: https://www.youtube.com/watch?v=WteIH6J9v64&t=111s 
+or
+https://youtu.be/Wfx4YBzg16s
 
 
 The registered users are saved onto registered.csv youtube follow 
 link https://www.youtube.com/watch?v=zdgYw-3tzfI&t=5757s
+
+
+Login page reference https://www.youtube.com/watch?v=W4GItcW7W-U&t=228s
 
 Difference between <main> and <body>
 The main element is used to differentiate the main content of the page from other content such as navigation links or ads.

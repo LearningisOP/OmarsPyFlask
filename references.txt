@@ -6,6 +6,8 @@ pip install Flask==2.1.2
 Notes to self:
 run the app from main.py
 
+bootstrap link for looks: https://getbootstrap.com/
+
 
 Every python app will need to have the structure
 Folder "app Name"

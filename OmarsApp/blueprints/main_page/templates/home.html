@@ -1,17 +1,22 @@
 {% extends "layout.html" %}
 
-{%  block content %}
+{% block links %}
+<style>
+body {
+    background-image: url("{{ url_for('about.static', filename='banner.jpg') }}");
+}
+</style>
+{% endblock %}
 
-<div><h1>Home Page</h1>
-    hello, {{ name }}
-</div>
+{% block title %}Landing Page{% endblock %}
 
+{% block content %}
+    <div class="col-md-8 offset-md-2 info">
+        <h1 class="text-center">Welcome you beast</h1>
+            <p class="text-center">
+            This is my lil dojo for now but this is going to be the main landing page
+            </p>
+                <a href="#" class="btn btn-md text-center">GET STARTED</a>
+    </div>
 
-    <h4> Sign up? </h4>
-    <button type="button" class="btn btn-dark" href="#">Join me</button>
-
-    <h4> Wanna Login?</h4>
-    <button type="button" class="btn btn-success" href="#">Welcome back</button>
-
-
-{%  endblock %}
+{% endblock %}

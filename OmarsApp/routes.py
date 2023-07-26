@@ -6,7 +6,7 @@ from blueprints.main_page.about import about_bp
 app = Flask(__name__)
 
 # register blueprints
-app.register_blueprint(about_bp)
+app.register_blueprint(about_bp, static_folder='static')
 
 app.register_blueprint(randompasswordgen_bp, url_prefix="/PGen",static_folder='passwordgenerator/static')
 

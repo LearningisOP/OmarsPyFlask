@@ -6,6 +6,8 @@ pip install Flask==2.1.2
 Notes to self:
 run the app from main.py
 
+- July 16 working on features branch merge the main branch from features once you come back
+
 bootstrap link for looks: https://getbootstrap.com/
 
 

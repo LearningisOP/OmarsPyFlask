@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block links %}
+{% block stylesheet %} 
+<link rel="stylesheet" type="text/css" href="url_for('img_grid.static', filename='imgGrid.css')" > 
+{% endblock %}
+<html lang="en" data-bs-theme="dark" ></html>
+{% endblock %}
+
+{% block head %}
+<div class="header">
+  <h1>Some of My Fav Pics</h1>
+</div>
+{% endblock %}
+
+{%  block content %}
+
+<div class="row">
+    <div class="column">
+      <img src="{{url_for('img_grid.static', filename='Dogs&Ma.jpg')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='FamCruis.thumbnail.jpg')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='Gfxoxo.jpg')}}" style="width:100%">
+    </div> 
+    <div class="column">
+      <img src="{{url_for('img_grid.static', filename='Gambles.jpg')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='UncsTeq.jpg')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='FamPVR.JPG')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='12thgradw_chris.JPG')}}" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{{url_for('img_grid.static', filename='GradDinner.jpeg')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='GrampsTwin.JPG')}}" style="width:100%">
+      <img src="{{url_for('img_grid.static', filename='Prom.JPG')}}" style="width:100%">
+    </div>
+</div>
+
+{%  endblock %}
+
+

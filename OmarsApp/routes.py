@@ -1,4 +1,4 @@
-from flask import Flask , request, url_for
+from flask import Flask , request, url_for, make_response
 from blueprints.passwordgenerator.randompasswordgen import randompasswordgen_bp
 from blueprints.login_page.login import login_bp
 from blueprints.main_page.about import about_bp

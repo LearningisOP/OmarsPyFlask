@@ -7,16 +7,16 @@
 
 <form action="/register" method="post">
   <input autocomplete="off" autofocus name = "name" placeholder="Name" type="text">
-  <select>
+  <select name="reason">
     <option disabled selected>Reason</option>
-    <option value="forfun">Job Application</option>
-    <option value="personalReason">Personal family/Friend</option>
-    <option value="Curiosity">Curiosity</option>
-    <input value="Other" type="radio" name="rad" id="otherRad"> <input  id="other" type="text" placeholder="Other" />
-  </select>
-  <button type="submit" href="/about" class="btn btn-primary">Continue</button>
-</form>
+    {% for reason in reason %}
+    <option value="{{reason}}">{{reason}}</option>
 
+    {% endfor %}
+  </select>
+</form>
+<input value="Other" type="radio" name="otherRad" id="otherRad"> <input  id="other" type="text" placeholder="Other" />
+<button type="submit" href="/about" class="btn btn-primary">Continue</button>
 
 <h3 align="center"> If you prefer to just browse click here</h3>
 <button  type="button" href="/about" class="btn btn-primary">Continue</button>

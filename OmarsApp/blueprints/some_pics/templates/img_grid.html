@@ -5,7 +5,7 @@
 <html lang="en" data-bs-theme="dark" ></html>
 {% endblock %}
 
-<title>{% block title %}Pics Section{% endblock %}</title>
+{% block title %}Pics Section{% endblock %}
 
 {% block head %}
 
@@ -13,8 +13,6 @@
 
 {%  block content %}
 
-<!DOCTYPE html>
-<html>
 <style>
 * {
   box-sizing: border-box;
@@ -48,7 +46,6 @@ body {
   clear: both;
 }
 </style>
-<body>
 
 <!-- Header -->
 <div class="header">

@@ -12,3 +12,8 @@ def home():
 @about_bp.route("/aboutme")
 def aboutmepage():
     return render_template("about.html")
+
+
+@about_bp.route("/contact")
+def contactmepage():
+    return render_template("contactpage.html")

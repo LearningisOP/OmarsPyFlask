@@ -1,0 +1,48 @@
+{% extends "layout.html" %} 
+
+{% block links %}
+<style>
+  body {
+    background-image: url("{{ url_for('login.static', filename='CPP-at-night.jpg') }}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+.h3Resume
+{
+  color: white !important;
+  text-align: left;
+}
+
+
+.ResumeDwonlad {
+  color: white !important;
+  text-align: center;
+}
+
+
+p {
+  color: #eccb0e;
+}
+  </style>
+{% endblock %}
+  
+  {% block title %}Login{% endblock %} 
+  
+{% block content %}
+<div class="bg-black p-2" style="--bs-bg-opacity: .7;">
+<h1 class="h3Resume">Hello There, This is my Landing Page with my Resume please feel free to take a look around</h2>
+<h4 class="ResumeDwonlad"> Download My Resume Here: 
+  <a href="\login_page\static\Omar's Resume.pdf" download="Omar's Resume">
+    <p>My PDF Resume</p>
+  </a>
+</h4>
+
+  <p>Omar Mejia</p>
+  <p>Cal Poly Pomona Graduate Class of 2023</p>
+  <p>Bachelor of Science Business Admin - Computer Information Systems, Emphasis in Business Intelligence</p>
+  <p>Email: mejomar320@gmail.com | Cell Number: (323)422-7875</p>
+</div>
+{% endblock %}

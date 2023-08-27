@@ -14,7 +14,7 @@ REASONS = [
 
 @login_bp.route("/")
 def login():
-    return render_template("login.html", reasons=REASONS)
+    return render_template("LandingPage.html")
 
 
 @login_bp.route("/register", methods=['POST'])

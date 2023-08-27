@@ -5,21 +5,38 @@
 body {
     background-image: url("{{ url_for('about.static', filename='banner.jpg') }}");
 }
+p {
+    text-align: left;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.bg-black {
+    color: rgb(239, 243, 5);
+}
 </style>
 {% endblock %}
 
 {% block title %}Landing Page{% endblock %}
 
 {% block content %}
-    <div class="col-md-8 offset-md-2 info">
-        <h1 class="text-center">Welcome you beast</h1>
-            <p class="text-center">
-            This is my lil dojo where I will Walk you through My website
-            </p>
-
-            <p class="text-center">
-                Here I will show you what each page is about and what you can expect from my website
-            </p>
+    <div class="bg-black">
+        <h1 class="text-center">Welcome</h1>
+            <h5 class="text-center">
+            This is my lil dojo. Here I will show you what each page is about and what you can expect from my website:
+            </h5>
+    </div>
+    <br>
+    <div class="bg-black p-2" style="--bs-bg-opacity: .7;">
+            <br>
+            1. Under the Projects tab you will see the two proejcts I have created a Password Generator and a feedback form. I am working on getting some analysis from this toe create a metrics dashboard
+            <br>
+            2. The About workspace is my Bio along with the link to redirect you back to my resume page
+            <br>
+            3. The Fav Pics Tab has some personal pictures meant for friends and family. If you would like to see this page reach out to me
+            <br>
+            4. The contact me page contains all the information you would need to reach out to me
+        </p>
     </div>
 
 

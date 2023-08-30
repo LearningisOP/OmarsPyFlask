@@ -1,25 +1,60 @@
 {% extends "layout.html" %}
 
-{% block links %}
-<style>
-body {
-    background-image: url("{{ url_for('about.static', filename='banner.jpg') }}");
-}
-p {
-    text-align: left;
-    color: aliceblue;
-    font-size: 20px;
-}
-
-.bg-black {
-    color: rgb(239, 243, 5);
-}
-</style>
-{% endblock %}
 
 {% block title %}Landing Page{% endblock %}
 
 {% block content %}
+
+<style>
+
+    body {
+        background-image: url("{{ url_for('about.static', filename='banner.jpg') }}");
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    
+    .bg-black {
+        color: rgb(239, 243, 5);
+    }
+    
+        /* this is the box section */
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 50px;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .containerTab {
+        padding: 20px;
+        color: white;
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Closable button inside the image */
+    .closebtn {
+        float: right;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    </style>
+
+
+
+
     <div class="bg-black">
         <h1 class="text-center">Welcome</h1>
             <h5 class="text-center">
@@ -27,17 +62,52 @@ p {
             </h5>
     </div>
     <br>
-    <div class="bg-black p-2" style="--bs-bg-opacity: .7;">
-            <br>
-            1. Under the Projects tab you will see the two proejcts I have created a Password Generator and a feedback form. I am working on getting some analysis from this toe create a metrics dashboard
-            <br>
-            2. The About workspace is my Bio along with the link to redirect you back to my resume page
-            <br>
-            3. The Fav Pics Tab has some personal pictures meant for friends and family. If you would like to see this page reach out to me
-            <br>
-            4. The contact me page contains all the information you would need to reach out to me
-        </p>
-    </div>
+    
+<div class="row">
+    <div class="column" onclick="openTab('b1');" style="background:green;">1. Projects</div>
+    <div class="column" onclick="openTab('b2');" style="background:blue;">2. About</div>
+    <div class="column" onclick="openTab('b3');" style="background:red;">3. Fav Pics</div>
+    <div class="column" onclick="openTab('b4');" style="background:rgb(132, 0, 255);">4. Contact me</div>
+</div>
+
+<!-- The expanding grid (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+    <!-- If you want the ability to close the container, add a close button -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Projects tab</h2>
+    <p>1. Under the Projects tab you will see the two projects I have created a Password Generator and a feedback form. I am working on getting some analysis from this toe create a metrics dashboard</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Box 2</h2>
+    <p>2. The About workspace is my Bio along with the link to redirect you back to my resume page</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Box 3</h2>
+    <p>3. The Fav Pics Tab has some personal pictures meant for friends and family. If you would like to see this page reach out to me</p>
+</div>
+
+<div id="b4" class="containerTab" style="display:none;background:rgb(116, 2, 247)">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+    <h2>Box 4</h2>
+    <p>4. The contact me page contains all the information you would need to reach out to me</p>
+</div>
+
+
+<script>
+// Hide all elements with class="containerTab", except for the one that matches the clickable grid column
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
 
 
 {% endblock %}
